@@ -89,18 +89,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-% Extiende el encabezado para que abarque todo el ancho del papel (full-bleed)
-\fancyheadoffset[L]{3cm}
-\fancyheadoffset[R]{2.8cm}
-
 \fancyhead[L]{%
-  {\setlength{\fboxsep}{0pt}%
-   \colorbox{azulprincipal}{%
-     \parbox[c][0.9cm][c]{\headwidth}{%
-       \hspace*{3cm}\color{white}\sffamily\small\textbf{Propuesta Económica}\ \textcolor{azulclaro}{|}\ Sistema de Control de Acceso Vehicular%
-     }%
-   }%
+  % Banda azul full-bleed: rlap (caja 0pt) + hspace negativo + rule \paperwidth
+  \rlap{%
+    \hspace*{-3cm}%
+    {\color{azulprincipal}\rule[-0.35cm]{\paperwidth}{1cm}}%
   }%
+  % Texto blanco superpuesto sobre la banda
+  \raisebox{-0.05cm}{\color{white}\sffamily\small\textbf{Propuesta Económica}\ \textcolor{azulclaro}{|}\ Sistema de Control de Acceso Vehicular}%
 }
 \fancyhead[R]{}
 \fancyhead[C]{}
