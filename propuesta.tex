@@ -1,0 +1,476 @@
+% ============================================================
+%  PROPUESTA ECONÓMICA — Sistema de Control de Acceso Vehicular
+%  Parcelación Cielo Campestre  |  Juan Pablo Palacio Villa
+%  Compilar con: xelatex propuesta.tex
+% ============================================================
+\documentclass[11pt, a4paper]{article}
+
+% --- Codificación y lenguaje ------------------------------------
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+
+% --- Fuentes (XeLaTeX) -----------------------------------------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[BoldFont={TeX Gyre Heros Bold}]{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+% --- Geometría -------------------------------------------------
+\usepackage[
+  a4paper,
+  top=2.8cm, bottom=2.8cm,
+  left=3.0cm, right=2.8cm,
+  headheight=1.6cm, headsep=0.6cm,
+  footskip=1.2cm
+]{geometry}
+
+% --- Colores ---------------------------------------------------
+\usepackage{xcolor}
+\definecolor{azulprincipal}{RGB}{22, 54, 102}
+\definecolor{azulsecundario}{RGB}{42, 103, 176}
+\definecolor{azulclaro}{RGB}{210, 225, 245}
+\definecolor{grisclaro}{RGB}{248, 249, 251}
+\definecolor{gristabla}{RGB}{230, 235, 242}
+\definecolor{grislinea}{RGB}{180, 190, 205}
+\definecolor{textogris}{RGB}{80, 85, 95}
+\definecolor{textoclaro}{RGB}{255, 255, 255}
+\definecolor{verdetotal}{RGB}{20, 90, 50}
+
+% --- Tablas y reglas -------------------------------------------
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{makecell}
+
+% --- Diseño de página ------------------------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{needspace}
+
+% --- Hipervínculos ---------------------------------------------
+\usepackage[
+  colorlinks=true,
+  linkcolor=azulprincipal,
+  urlcolor=azulsecundario,
+  hidelinks
+]{hyperref}
+
+% --- Títulos de sección ----------------------------------------
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\large\bfseries\sffamily\color{azulprincipal}}
+  {}{0em}
+  {}
+  [\vspace{-4pt}\color{azulsecundario}\rule{\linewidth}{1.2pt}\vspace{2pt}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\sffamily\color{azulprincipal}}
+  {}{0em}{}
+
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+
+% --- Encabezado y pie de página --------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[L]{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[azulprincipal]
+      (current page.north west) rectangle
+      ([yshift=-1.4cm]current page.north east);
+  \end{tikzpicture}%
+  \raisebox{0.15cm}{\color{white}\sffamily\small\textbf{Propuesta Económica} \textcolor{azulclaro}{|}\ Sistema de Control de Acceso Vehicular}%
+}
+\fancyhead[R]{%
+  \raisebox{0.15cm}{\color{white}\sffamily\small Ref.\ \textbf{PCC-001-2026}}%
+}
+
+\fancyfoot[L]{\small\sffamily\color{textogris}Juan Pablo Palacio Villa \ \textbullet\ C.C.\ 1.035.833.895}
+\fancyfoot[C]{\small\sffamily\color{textogris}Mayo de 2026}
+\fancyfoot[R]{\small\sffamily\color{textogris}Página \thepage\ de \pageref{LastPage}}
+
+% --- Macros utilitarias ----------------------------------------
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\newcommand{\thdr}[1]{\cellcolor{azulprincipal}\color{white}\sffamily\small\textbf{#1}}
+\newcommand{\tsubt}[1]{\multicolumn{1}{r|}{\cellcolor{gristabla}\bfseries\sffamily\small #1}}
+\newcommand{\ttotal}[1]{\cellcolor{azulprincipal}\color{white}\bfseries\sffamily\small #1}
+
+% ============================================================
+%  DOCUMENTO
+% ============================================================
+\begin{document}
+\setstretch{1.12}
+
+% ============================================================
+%  PORTADA / BLOQUE ENCABEZADO
+% ============================================================
+\thispagestyle{empty}
+
+% Banda superior
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[azulprincipal]
+    (current page.north west) rectangle
+    ([yshift=-6.8cm]current page.north east);
+  \fill[azulsecundario]
+    ([yshift=-6.8cm]current page.north west) rectangle
+    ([yshift=-7.2cm]current page.north east);
+\end{tikzpicture}
+
+\vspace*{0.4cm}
+
+\begin{minipage}[t]{0.62\textwidth}
+  \color{white}
+  \sffamily
+  {\fontsize{20}{24}\selectfont\bfseries PROPUESTA ECONÓMICA}\\[6pt]
+  {\large Sistema de Control de Acceso Vehicular Inteligente}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+  \color{white}\sffamily\small
+  \begin{tabular}{@{}ll@{}}
+    \textcolor{azulclaro}{Referencia:}  & \textbf{PCC-001-2026} \\[3pt]
+    \textcolor{azulclaro}{Fecha:}       & Mayo de 2026 \\[3pt]
+    \textcolor{azulclaro}{Válida hasta:}& Junio de 2026 \\
+  \end{tabular}
+\end{minipage}
+
+\vspace{2.6cm}
+
+% Bloque de identificación
+\begin{mdframed}[
+  backgroundcolor=grisclaro,
+  linecolor=grislinea,
+  linewidth=0.6pt,
+  innertopmargin=10pt, innerbottommargin=10pt,
+  innerleftmargin=16pt, innerrightmargin=16pt,
+  roundcorner=4pt
+]
+\sffamily\small
+\begin{minipage}[t]{0.44\linewidth}
+  {\bfseries\color{azulprincipal}Presentado por}\\[3pt]
+  Juan Pablo Palacio Villa\\[7pt]
+  {\bfseries\color{azulprincipal}C.C.}\\[3pt]
+  1.035.833.895
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.52\linewidth}
+  {\bfseries\color{azulprincipal}Presentado a}\\[3pt]
+  Parcelación Cielo Campestre\\[7pt]
+  {\bfseries\color{azulprincipal}Contacto}\\[3pt]
+  juanpablopalaciovilla@gmail.com
+\end{minipage}
+\end{mdframed}
+
+\vspace{0.5cm}
+
+% ============================================================
+%  1. DESCRIPCIÓN DEL PROYECTO
+% ============================================================
+\section{1. Descripción del Proyecto}
+
+La Parcelación Cielo Campestre, conformada por aproximadamente 30 lotes, requiere un sistema que
+permita a sus residentes controlar de forma remota el motor de la puerta vehicular de ingreso, con
+capacidad de monitoreo visual en tiempo real. La solución propuesta integra un \textit{relay} inteligente
+de dos canales, una cámara de vigilancia con panel solar y un \textit{router} Wi-Fi, todo alojado en
+un gabinete estanco para uso a la intemperie.
+
+\subsection{Flujo de operación}
+
+El residente puede visualizar la cámara con audio bidireccional y, si lo autoriza, accionar la apertura
+del motor. La puerta se cierra automáticamente mediante un temporizador configurado en el \textit{relay}.
+En ausencia de datos móviles, el residente puede conectarse directamente al Wi-Fi instalado en la portería
+para operar el sistema de forma local.
+
+% ============================================================
+%  2. ALCANCE DE LA SOLUCIÓN
+% ============================================================
+\section{2. Alcance de la Solución}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\sffamily\small\color{azulprincipal}}L{4.2cm}
+                                 >{\small}X@{}}
+  \toprule
+  \thdr{Componente} & \thdr{Descripción} \\
+  \midrule
+  \rowcolor{grisclaro}
+  Control remoto de acceso &
+    \textit{Relay} inteligente Shelly Pro~2 con Wi-Fi, LAN y Bluetooth --- montaje en riel DIN \\[3pt]
+  Monitoreo de entrada &
+    Cámara EZVIZ HB8C Lite 4G con panel solar --- panorámica 360°, visión nocturna a color,
+    audio bidireccional, detección IA de personas y vehículos \\[3pt]
+  \rowcolor{grisclaro}
+  Conectividad en portería &
+    \textit{Router} TP-Link Archer AX12 Wi-Fi~6 --- conexión LAN al \textit{relay} y Wi-Fi para residentes \\[3pt]
+  Infraestructura de red &
+    Cable UTP Cat6 100\% cobre tendido en tubería conduit subterránea (50~m) desde
+    punto de internet existente hasta portería \\[3pt]
+  \rowcolor{grisclaro}
+  Alojamiento y protección &
+    Gabinete estanco IP66/IK10 con riel DIN, \textit{breaker} de protección y borneras ---
+    apto para instalación a la intemperie \\[3pt]
+  Alimentación eléctrica &
+    Cable encauchetado 3$\times$12~AWG desde tablero eléctrico existente (circuito 15~A / 110~V) \\
+  \bottomrule
+\end{tabularx}
+
+% ============================================================
+%  3. RELACIÓN DE MATERIALES Y EQUIPOS
+% ============================================================
+\section{3. Relación de Materiales y Equipos}
+
+\subsection{3.1 Equipos Principales}
+
+\begin{tabularx}{\textwidth}{@{}
+    C{0.5cm}
+    X
+    C{1.2cm}
+    R{2.4cm}
+    R{2.4cm}@{}}
+  \toprule
+  \thdr{\#} & \thdr{Descripción} & \thdr{Cant.} &
+  \thdr{Vr. Unitario} & \thdr{Vr. Total} \\
+  \midrule
+  \rowcolor{grisclaro}
+  1 & \textit{Relay} inteligente Shelly Pro~2 --- Wi-Fi / LAN / 2 canales / riel DIN
+    & 1 & \$\,270.000 & \$\,270.000 \\[2pt]
+  2 & Gabinete estanco IP66/IK10 --- Precision PST-3040-20A (300$\times$400$\times$200~mm)
+    & 1 & \$\,213.887 & \$\,213.887 \\[2pt]
+  \rowcolor{grisclaro}
+  3 & Riel DIN estándar 35~mm $\times$ 1~m --- acero galvanizado
+    & 1 & \$\,10.000 & \$\,10.000 \\[2pt]
+  4 & \textit{Breaker} unipolar 10~A para riel DIN (taco eléctrico)
+    & 1 & \$\,13.000 & \$\,13.000 \\[2pt]
+  \rowcolor{grisclaro}
+  5 & Cámara EZVIZ HB8C Lite 4G 4MP + panel solar 5~W
+    & 1 & \$\,624.000 & \$\,624.000 \\[2pt]
+  6 & \textit{Router} TP-Link Archer AX12 --- Wi-Fi~6 AX1500
+    & 1 & \$\,128.000 & \$\,128.000 \\[2pt]
+  \rowcolor{grisclaro}
+  7 & Borneras de paso riel DIN 8~AWG / 41~A (pack $\times$ 3 und)
+    & 1 & \$\,11.100 & \$\,11.100 \\
+  \midrule
+  \multicolumn{4}{r}{\cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries SUBTOTAL EQUIPOS} &
+  \cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries\$\,1.269.987 \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.6cm}
+\subsection{3.2 Consumibles e Insumos}
+
+\begin{tabularx}{\textwidth}{@{}
+    C{0.5cm}
+    X
+    C{1.4cm}
+    R{2.4cm}
+    R{2.4cm}@{}}
+  \toprule
+  \thdr{\#} & \thdr{Descripción} & \thdr{Cant.} &
+  \thdr{Vr. Unitario} & \thdr{Vr. Total} \\
+  \midrule
+  \rowcolor{grisclaro}
+  1 & Cable UTP Cat6 100\% cobre
+    & 50~m & \$\,2.600 & \$\,130.000 \\[2pt]
+  2 & Conectores RJ45 Cat6 ponchables
+    & 6~und & \$\,1.667 & \$\,10.000 \\[2pt]
+  \rowcolor{grisclaro}
+  3 & Cable encauchetado 3$\times$12~AWG --- 110~V, certificado RETIE
+    & 12~m & \$\,10.600 & \$\,127.200 \\[2pt]
+  4 & Cable THHN \#14~AWG --- cableado interno del gabinete (varios colores)
+    & 8~m & \$\,2.203 & \$\,17.624 \\[2pt]
+  \rowcolor{grisclaro}
+  5 & Cable encauchetado THHN/THWN 5$\times$16~AWG negro cert.\ RETIE --- control motor (ref.\ CBE516)
+    & 6~m & \$\,9.900 & \$\,59.400 \\[2pt]
+  6 & Correas plásticas negras 20~cm (pack $\times$ 100~und)
+    & 1 & \$\,9.200 & \$\,9.200 \\[2pt]
+  \rowcolor{grisclaro}
+  7 & Prensaestopas PG16 con tuerca IP68
+    & 4~und & \$\,2.741 & \$\,10.964 \\[2pt]
+  8 & Tubo conduit PVC 1/2'' $\times$ 3~m --- Pavco Wavin
+    & 5~und & \$\,4.690 & \$\,23.450 \\
+  \midrule
+  \multicolumn{4}{r}{\cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries SUBTOTAL CONSUMIBLES} &
+  \cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries\$\,387.838 \\
+  \bottomrule
+\end{tabularx}
+
+% ============================================================
+%  4. MANO DE OBRA
+% ============================================================
+\needspace{4cm}
+\section{4. Mano de Obra}
+
+\begin{tabularx}{\textwidth}{@{}
+    C{0.6cm}
+    X
+    R{2.6cm}@{}}
+  \toprule
+  \thdr{\#} & \thdr{Actividad} & \thdr{Valor} \\
+  \midrule
+  \rowcolor{grisclaro}
+  1  & Replanteo y trazado de ruta subterránea (15~m) & \$\,25.000 \\[2pt]
+  2  & Excavación de zanja (15~m $\times$ 40~cm de profundidad) & \$\,100.000 \\[2pt]
+  \rowcolor{grisclaro}
+  3  & Instalación de tubería conduit PVC 1/2'' subterránea (15~m) & \$\,25.000 \\[2pt]
+  4  & Tendido de cable UTP Cat6 por tubería (15~m) & \$\,25.000 \\[2pt]
+  \rowcolor{grisclaro}
+  5  & Ponchado de conectores RJ45 en ambos extremos & \$\,25.000 \\[2pt]
+  6  & Relleno, compactación y acabado de zanja & \$\,50.000 \\[2pt]
+  \rowcolor{grisclaro}
+  7  & Instalación y fijación del gabinete estanco en muro o poste & \$\,70.000 \\[2pt]
+  8  & Montaje de riel DIN, \textit{breaker}, \textit{relay}, borneras y prensaestopas dentro del gabinete & \$\,250.000 \\[2pt]
+  \rowcolor{grisclaro}
+  9  & Tendido de cable encauchetado 3$\times$12~AWG (12~m, tablero $\rightarrow$ gabinete) & \$\,25.000 \\[2pt]
+  10 & Conexión al tablero eléctrico principal (\textit{breaker} 15~A) & \$\,50.000 \\[2pt]
+  \rowcolor{grisclaro}
+  11 & Instalación y configuración del \textit{router} TP-Link AX12 & \$\,50.000 \\[2pt]
+  12 & Configuración del \textit{relay} Shelly Pro~2 (Wi-Fi, modo apertura/cierre, \textit{timer autoclose}, 30 usuarios) & \$\,150.000 \\[2pt]
+  \rowcolor{grisclaro}
+  13 & Conexión del \textit{relay} Shelly al motor de la puerta vehicular (cable de control 5 hilos) & \$\,30.000 \\[2pt]
+  14 & Instalación y montaje de cámara EZVIZ HB8C + panel solar & \$\,50.000 \\[2pt]
+  \rowcolor{grisclaro}
+  15 & Configuración de cámara EZVIZ (Wi-Fi, app, acceso compartido a residentes) & \$\,50.000 \\[2pt]
+  16 & Pruebas generales del sistema (apertura, cierre, temporizador, video, notificaciones) & \$\,25.000 \\[2pt]
+  \rowcolor{grisclaro}
+  17 & Capacitación a administración y residentes --- uso de apps Shelly y EZVIZ & \$\,60.000 \\
+  \midrule
+  \multicolumn{2}{r}{\cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries SUBTOTAL MANO DE OBRA} &
+  \cellcolor{azulprincipal}\color{white}\sffamily\small\bfseries\$\,1.060.000 \\
+  \bottomrule
+\end{tabularx}
+
+% ============================================================
+%  5. RESUMEN ECONÓMICO
+% ============================================================
+\section{5. Resumen Económico}
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+  \toprule
+  \thdr{Concepto} & \thdr{Valor COP} \\
+  \midrule
+  \rowcolor{grisclaro}
+  Equipos principales   & \$\,1.269.987 \\[3pt]
+  Consumibles e insumos & \$\,387.838 \\[3pt]
+  \rowcolor{grisclaro}
+  Mano de obra          & \$\,1.060.000 \\
+  \midrule
+  \multicolumn{1}{l}{\cellcolor{azulprincipal}\color{white}\sffamily\bfseries\large TOTAL DEL PROYECTO} &
+  \cellcolor{azulprincipal}\color{white}\sffamily\bfseries\large\$\,2.717.825 \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{4pt}
+{\small\sffamily\color{textogris}
+Los precios están sujetos a cambios por disponibilidad en proveedores de MercadoLibre, envíos e impuestos de importación.
+Valores expresados en pesos colombianos (COP) con IVA incluido donde aplica.}
+
+% ============================================================
+%  6. CONDICIONES COMERCIALES
+% ============================================================
+\section{6. Condiciones Comerciales}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\sffamily\small\color{azulprincipal}}L{4.2cm}
+                                 >{\small}X@{}}
+  \toprule
+  \thdr{Condición} & \thdr{Detalle} \\
+  \midrule
+  \rowcolor{grisclaro}
+  Forma de pago &
+    70\% de anticipo al aceptar la propuesta --- 30\% contra entrega y pruebas \\[4pt]
+  Tiempo de ejecución &
+    Recibido el anticipo, se procederá de inmediato con la compra de los materiales.
+    Una vez entregado el último de ellos, la instalación iniciará dentro de los 5~días
+    siguientes y tomará dos días en completarse. \\[4pt]
+  \rowcolor{grisclaro}
+  Garantía mano de obra & 3 meses sobre la instalación \\[4pt]
+  Garantía equipos & Según garantía de fábrica de cada fabricante \\[4pt]
+  \rowcolor{grisclaro}
+  Validez de la oferta & 30 días calendario a partir de la fecha de emisión \\
+  \bottomrule
+\end{tabularx}
+
+% ============================================================
+%  7. CONSIDERACIONES Y EXCLUSIONES
+% ============================================================
+\section{7. Consideraciones y Exclusiones}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \subsection{Incluye}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=4pt]
+    \item Suministro, instalación y configuración de todos los equipos y materiales listados
+    \item Obra civil menor: excavación, tendido de tubería y relleno de zanja (15~m)
+    \item Configuración de acceso para hasta 30 usuarios residentes en apps Shelly y EZVIZ
+    \item Una sesión de capacitación virtual o presencial para administración y residentes
+  \end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \subsection{No incluye}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=4pt]
+    \item Contrato de servicio de internet con el ISP (proveedor de internet)
+    \item Plan de datos móviles para conectividad 4G de la cámara
+    \item Obra civil mayor: retiro de pavimento, andenes o estructuras existentes
+    \item Modificaciones al motor de la puerta si no cuenta con entrada para contactos secos
+    \item Suministro del \textit{breaker} de 15~A en el tablero eléctrico principal
+  \end{itemize}
+\end{minipage}
+
+% ============================================================
+%  8. ACEPTACIÓN
+% ============================================================
+\clearpage
+\vspace*{\fill}
+
+\begin{minipage}{\textwidth}
+\begin{mdframed}[
+  backgroundcolor=azulclaro,
+  linecolor=azulprincipal,
+  linewidth=0.8pt,
+  innertopmargin=14pt, innerbottommargin=14pt,
+  innerleftmargin=18pt, innerrightmargin=18pt,
+  roundcorner=4pt
+]
+\sffamily\small
+\textcolor{azulprincipal}{\textbf{Para la aceptación de esta propuesta, favor comunicarse con:}}\\[8pt]
+\begin{tabular}{@{}ll@{}}
+  \textcolor{azulprincipal}{\textbf{Nombre:}}  & Juan Pablo Palacio Villa \\[4pt]
+  \textcolor{azulprincipal}{\textbf{C.C.:}}    & 1.035.833.895 \\[4pt]
+  \textcolor{azulprincipal}{\textbf{Correo:}}  & juanpablopalaciovilla@gmail.com \\
+\end{tabular}
+
+\vspace{20pt}
+
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+  \rule{5.5cm}{0.4pt} & \rule{5.5cm}{0.4pt} \\[5pt]
+  \small\textcolor{textogris}{Firma y sello del proponente} &
+  \small\textcolor{textogris}{Firma y sello del contratante} \\[3pt]
+  \small\textcolor{textogris}{Juan Pablo Palacio Villa} &
+  \small\textcolor{textogris}{Parcelación Cielo Campestre} \\
+\end{tabularx}
+\end{mdframed}
+\end{minipage}
+
+\vspace{0.8cm}
+{\centering\small\sffamily\color{textogris}
+\textit{Propuesta elaborada el 23 de mayo de 2026 --- Referencia PCC-001-2026}
+\par}
+
+\vspace*{\fill}
+
+\end{document}
