@@ -19,7 +19,7 @@ La Parcelación Cielo Campestre, conformada por aproximadamente 30 lotes, requie
 
 ### Flujo de operación
 
-El residente recibe una notificación en su celular al detectarse movimiento en la entrada. Puede visualizar la cámara con audio bidireccional y, si lo autoriza, accionar la apertura del motor. La puerta se cierra automáticamente mediante un temporizador configurado en el relay. En ausencia de datos móviles, el residente puede conectarse directamente al Wi-Fi instalado en la portería para operar el sistema de forma local.
+El residente puede visualizar la cámara con audio bidireccional y, si lo autoriza, accionar la apertura del motor. La puerta se cierra automáticamente mediante un temporizador configurado en el relay. En ausencia de datos móviles, el residente puede conectarse directamente al Wi-Fi instalado en la portería para operar el sistema de forma local.
 
 ---
 
@@ -42,16 +42,14 @@ El residente recibe una notificación en su celular al detectarse movimiento en 
 
 | Ítem | Descripción | Cant. | Valor unitario | Valor total |
 |------|-------------|:-----:|---------------:|------------:|
-| 1 | Relay inteligente Shelly Pro 2 — Wi-Fi / LAN / 2 canales / riel DIN | 1 | $220.000 * | $220.000 |
-| 2 | Gabinete estanco IP66 / IK10 — Precision PST-3040-20A (300×400×200 mm) | 1 | $320.000 * | $320.000 |
-| 3 | Riel DIN estándar 35 mm × 1 m — acero galvanizado | 1 | $15.000 * | $15.000 |
+| 1 | Relay inteligente Shelly Pro 2 — Wi-Fi / LAN / 2 canales / riel DIN | 1 | $270.000 | $270.000 |
+| 2 | Gabinete estanco IP66 / IK10 — Precision PST-3040-20A (300×400×200 mm) | 1 | $213.887 | $213.887 |
+| 3 | Riel DIN estándar 35 mm × 1 m — acero galvanizado | 1 | $10.000 | $10.000 |
 | 4 | Breaker unipolar 10 A para riel DIN (taco eléctrico) | 1 | $13.000 | $13.000 |
-| 5 | Cámara EZVIZ HB8C Lite 4G 4MP + panel solar 5 W | 1 | $420.000 * | $420.000 |
+| 5 | Cámara EZVIZ HB8C Lite 4G 4MP + panel solar 5 W | 1 | $624.000 | $624.000 |
 | 6 | Router TP-Link Archer AX12 — Wi-Fi 6 AX1500 | 1 | $128.000 | $128.000 |
 | 7 | Borneras de paso riel DIN 8 AWG / 41 A (pack × 3 und) | 1 | $11.100 | $11.100 |
-| | | | **SUBTOTAL** | **$1.127.100** |
-
-> (*) Precios de referencia sujetos a confirmación de disponibilidad en el momento de la compra. Los demás precios están confirmados con proveedores.
+| | | | **SUBTOTAL** | **$1.269.987** |
 
 ---
 
@@ -59,15 +57,15 @@ El residente recibe una notificación en su celular al detectarse movimiento en 
 
 | Ítem | Descripción | Cant. | Valor unitario | Valor total |
 |------|-------------|:-----:|---------------:|------------:|
-| 1 | Cable UTP Cat6 100% cobre | 15 m | $2.600 | $39.000 |
-| 2 | Conectores RJ45 Cat6 ponchables (pack × 50 und) | 1 | $16.800 | $16.800 |
+| 1 | Cable UTP Cat6 100% cobre | 50 m | $2.600 | $130.000 |
+| 2 | Conectores RJ45 Cat6 ponchables | 6 und | $1.667 | $10.000 |
 | 3 | Cable encauchetado 3×12 AWG — 110 V, certificado RETIE | 12 m | $10.600 | $127.200 |
 | 4 | Cable THHN #14 AWG — cableado interno del gabinete (varios colores) | 8 m | $2.203 | $17.624 |
-| 5 | Cable THHN #14 AWG — control motor (5 conductores × 3 m) | 15 m | $2.203 | $33.045 |
+| 5 | Cable encauchetado THHN/THWN 5×16 AWG negro cert. RETIE — control motor (ref. CBE516) | 6 m | $9.900 | $59.400 |
 | 6 | Correas plásticas negras 20 cm (pack × 100 und) | 1 | $9.200 | $9.200 |
 | 7 | Prensaestopas PG16 con tuerca IP68 | 4 und | $2.741 | $10.964 |
 | 8 | Tubo conduit PVC ½" × 3 m — Pavco Wavin | 5 und | $4.690 | $23.450 |
-| | | | **SUBTOTAL** | **$277.283** |
+| | | | **SUBTOTAL** | **$387.838** |
 
 ---
 
@@ -100,12 +98,12 @@ El residente recibe una notificación en su celular al detectarse movimiento en 
 
 | Concepto | Valor COP |
 |----------|----------:|
-| Equipos principales | $1.127.100 |
-| Consumibles e insumos | $277.283 |
+| Equipos principales | $1.269.987 |
+| Consumibles e insumos | $387.838 |
 | Mano de obra | $1.060.000 |
-| **TOTAL DEL PROYECTO** | **$2.464.383** |
+| **TOTAL DEL PROYECTO** | **$2.717.825** |
 
-> Los precios incluyen IVA donde aplica. Para los ítems marcados (*) el valor final depende de disponibilidad en el momento de la compra; el total podría variar entre **$2.300.000** y **$2.650.000 COP** dependiendo de la cotización definitiva de dichos ítems.
+> Los precios estan sujetos a cambios por disponibilidad en proveedores de MercadoLibre, envíos e impuestos de importación.
 
 ---
 
@@ -113,40 +111,12 @@ El residente recibe una notificación en su celular al detectarse movimiento en 
 
 | Condición | Detalle |
 |---|---|
-| **Forma de pago** | 50% anticipo al aceptar la propuesta — 50% contra entrega y pruebas |
-| **Tiempo de ejecución** | 3 a 5 días hábiles a partir del anticipo y disponibilidad de materiales |
+| **Forma de pago** | 70% anticipo al aceptar la propuesta — 30% contra entrega y pruebas |
+| **Tiempo de ejecución** | Recibido el anticipo, se procederá de inmediato con la compra de los materiales. Una vez entregado el último de ellos, la instalación iniciará dentro de los 5 días siguientes y tomará dos días en completarse. |
 | **Garantía mano de obra** | 3 meses sobre la instalación |
 | **Garantía equipos** | Según garantía de fábrica de cada fabricante |
 | **Validez de la oferta** | 30 días calendario a partir de la fecha de emisión |
 
----
-
-## 7. Consideraciones y Exclusiones
-
-**El presente presupuesto incluye:**
-
-- Suministro, instalación y configuración de todos los equipos y materiales listados
-- Obra civil menor: excavación, tendido de tubería y relleno de zanja (15 m)
-- Configuración de acceso para hasta 30 usuarios residentes en apps Shelly y EZVIZ
-- Una sesión de capacitación virtual o presencial para administración y residentes
-
-**No incluye:**
-
-- Contrato de servicio de internet con el ISP (proveedor de internet)
-- Plan de datos móviles para la conectividad 4G de la cámara (operación actual solo por Wi-Fi)
-- Obra civil mayor: retiro de pavimento, andenes o estructuras existentes
-- Modificaciones al motor de la puerta existente si no cuenta con entrada para contactos secos
-- Suministro e instalación del breaker de 15 A en el tablero eléctrico principal (solo conexión)
-
----
-
-## 8. Aceptación
-
-Para la aceptación de esta propuesta, favor comunicarse con:
-
-**Juan Pablo Palacio Villa**
-C.C. 1.035.833.895
-Correo: juanpablopalaciovilla@gmail.com
 
 ---
 

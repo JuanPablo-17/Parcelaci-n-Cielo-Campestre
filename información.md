@@ -61,8 +61,7 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 | Consumo propio | < 3 W |
 | App | Shelly Cloud (iOS / Android) |
 | Funciones clave | Timer autoclose, acceso multiusuario (30 residentes), webhooks, programación horaria |
-| Precio Colombia | **A confirmar** en MercadoLibre (acceso bloqueado para scraping) |
-| Referencia precio | ~USD $50–60 ≈ COP $200.000–$245.000 |
+| **Precio Colombia** | **$270.000 COP** |
 
 ---
 
@@ -78,8 +77,10 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 | Protección | IP66 / IK10 |
 | Peso | 7,07 kg |
 | Incluye | Placa trasera galvanizada, cerradura con llave, compuerta inferior atornillable |
-| Stock | 337 unidades disponibles |
-| Precio | **A confirmar** (requiere login SYSCOM Colombia) |
+| Stock | Disponible |
+| **Precio** | **$213.887 COP** |
+| Proveedor confirmado | Fenix Comercial Colombia |
+| URL | fenixcomercial.com.co/product/gabinete-de-acero-ip66... |
 
 ---
 
@@ -92,7 +93,7 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 | Dimensiones | 35 × 7,5 × 1,0 mm · longitud 1 m |
 | Material | Acero cold-rolled, recubrimiento zinc-cromo |
 | Uso | Se corta a ≈ 30 cm según ancho del gabinete |
-| Precio | **A confirmar** |
+| **Precio** | **$10.000 COP** |
 
 ---
 
@@ -129,8 +130,7 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 | Disuasión activa | Sirena + luz estroboscópica |
 | Protección | Apta para intemperie |
 | Conectividad activa | **Solo WiFi** (sin SIM por el momento) |
-| Precio Colombia | **A confirmar** en MercadoLibre (acceso bloqueado) |
-| Referencia precio | ~USD $90–120 ≈ COP $370.000–$490.000 |
+| **Precio Colombia** | **$624.000 COP** |
 
 ---
 
@@ -188,10 +188,10 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 | # | Ítem | Especificación | Cant. | Precio unit. | Subtotal COP |
 |---|------|---------------|-------|-------------|--------------|
 | 1 | Cable UTP Cat6 100% cobre | Interior, por metro | 15 m | $2.600 | **$39.000** |
-| 2 | Conectores RJ45 Cat6 ponchables | Pack × 50 unidades | 1 pack | $16.800 | **$16.800** |
+| 2 | Conectores RJ45 Cat6 ponchables | Unidad | 6 und | $1.667 | **$10.000** |
 | 3 | Cable encauchetado 3×12 AWG | 110 V, cert. RETIE, por metro | 12 m | $10.600 | **$127.200** |
 | 4 | Cable THHN #14 AWG (cableado interno rack) | Por metro, varios colores | 8 m | $2.203 | **$17.624** |
-| 5 | Cable THHN #14 AWG (control motor: 5 conductores × 3 m) | Por metro (5 colores × 3 m = 15 m) | 15 m | $2.203 | **$33.045** |
+| 5 | Cable encauchetado THHN/THWN 5×16 AWG negro cert. RETIE — control motor (ref. CBE516, electroservimos.co) | Por metro | 6 m | $9.900 | **$59.400** |
 | 6 | Correas plásticas negras × 100 | Dexson 20 cm, nylon negro UV | 1 pack | $9.200 | **$9.200** |
 | 7 | Prensaestopas PG16 | Dexson 5/8", con tuerca, IP68 | 4 und | $2.741 | **$10.964** |
 | 8 | Tubos conduit PVC ½" × 3 m | Pavco Wavin, Homecenter | 5 und | $4.690 | **$23.450** |
@@ -228,15 +228,19 @@ Alimentado por cable encauchetado 3×12 AWG · 12 m · circuito 15 A · 110 V.
 
 | Ítem | Precio COP | Fuente | Estado |
 |------|-----------|--------|--------|
-| Shelly Pro 2 (relay 2CH DIN) | A confirmar | MercadoLibre CO | Est. $200k–$245k |
-| Gabinete IP66 PST-3040-20A | A confirmar | SYSCOM Colombia | Requiere login |
-| Riel DIN 35 mm × 1 m | A confirmar | SYSCOM / MercadoLibre | — |
-| Breaker 1P 10 A riel DIN | ~$13.000 | Interelectricos.com.co | Referencia |
-| Cámara EZVIZ HB8C + solar | A confirmar | MercadoLibre CO | Est. $370k–$490k |
+| Shelly Pro 2 (relay 2CH DIN) | **$270.000** | MercadoLibre CO | Confirmado |
+| Gabinete IP66 PST-3040-20A | **$213.887** | Fenix Comercial Colombia | Confirmado |
+| Riel DIN 35 mm × 1 m | **$10.000** | MercadoLibre CO | Confirmado |
+| Breaker 1P 10 A riel DIN | **$13.000** | Interelectricos.com.co | Confirmado |
+| Cámara EZVIZ HB8C + solar | **$624.000** | MercadoLibre CO | Confirmado |
 | Router TP-Link AX12 | **$128.000** | Tecnoplaza Colombia | Confirmado |
 | Borneras DIN 8AWG (pack × 3) | **$11.100** | MercadoLibre | Confirmado |
 | Tubos conduit ½" (× 5 und) | **$23.450** | Homecenter | Confirmado |
-| Consumibles varios | **$244.238** | Varios | Confirmado |
+| Consumibles varios | **$277.283** | Varios | Confirmado |
+| **TOTAL EQUIPOS** | **$1.269.987** | | |
+| **TOTAL CONSUMIBLES** | **$277.283** | | |
+| **MANO DE OBRA** | **$1.060.000** | | |
+| **GRAN TOTAL** | **$2.607.270** | | |
 
 ---
 
