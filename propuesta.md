@@ -9,7 +9,6 @@
 | **C.C.** | 1.035.833.895 |
 | **Presentado a** | Parcelación Cielo Campestre |
 | **Fecha** | Mayo de 2026 |
-| **Referencia** | PCC-001-2026 |
 
 ---
 

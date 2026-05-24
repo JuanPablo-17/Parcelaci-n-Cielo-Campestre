@@ -57,6 +57,7 @@
 \usepackage{mdframed}
 \usepackage{tikz}
 \usepackage{needspace}
+\usepackage{eso-pic}
 
 % --- Hipervínculos ---------------------------------------------
 \usepackage[
@@ -88,20 +89,24 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+% Extiende el encabezado para que abarque todo el ancho del papel (full-bleed)
+\fancyheadoffset[L]{3cm}
+\fancyheadoffset[R]{2.8cm}
+
 \fancyhead[L]{%
-  \begin{tikzpicture}[remember picture, overlay]
-    \fill[azulprincipal]
-      (current page.north west) rectangle
-      ([yshift=-1.4cm]current page.north east);
-  \end{tikzpicture}%
-  \raisebox{0.15cm}{\color{white}\sffamily\small\textbf{Propuesta Económica} \textcolor{azulclaro}{|}\ Sistema de Control de Acceso Vehicular}%
+  {\setlength{\fboxsep}{0pt}%
+   \colorbox{azulprincipal}{%
+     \parbox[c][0.9cm][c]{\headwidth}{%
+       \hspace*{3cm}\color{white}\sffamily\small\textbf{Propuesta Económica}\ \textcolor{azulclaro}{|}\ Sistema de Control de Acceso Vehicular%
+     }%
+   }%
+  }%
 }
-\fancyhead[R]{%
-  \raisebox{0.15cm}{\color{white}\sffamily\small Ref.\ \textbf{PCC-001-2026}}%
-}
+\fancyhead[R]{}
+\fancyhead[C]{}
 
 \fancyfoot[L]{\small\sffamily\color{textogris}Juan Pablo Palacio Villa \ \textbullet\ C.C.\ 1.035.833.895}
-\fancyfoot[C]{\small\sffamily\color{textogris}Mayo de 2026}
+\fancyfoot[C]{}
 \fancyfoot[R]{\small\sffamily\color{textogris}Página \thepage\ de \pageref{LastPage}}
 
 % --- Macros utilitarias ----------------------------------------
@@ -146,9 +151,7 @@
 \begin{minipage}[t]{0.34\textwidth}
   \color{white}\sffamily\small
   \begin{tabular}{@{}ll@{}}
-    \textcolor{azulclaro}{Referencia:}  & \textbf{PCC-001-2026} \\[3pt]
-    \textcolor{azulclaro}{Fecha:}       & Mayo de 2026 \\[3pt]
-    \textcolor{azulclaro}{Válida hasta:}& Junio de 2026 \\
+    \textcolor{azulclaro}{Fecha:} & \textbf{Mayo de 2026} \\
   \end{tabular}
 \end{minipage}
 
@@ -173,9 +176,7 @@
 \hfill
 \begin{minipage}[t]{0.52\linewidth}
   {\bfseries\color{azulprincipal}Presentado a}\\[3pt]
-  Parcelación Cielo Campestre\\[7pt]
-  {\bfseries\color{azulprincipal}Contacto}\\[3pt]
-  juanpablopalaciovilla@gmail.com
+  Parcelación Cielo Campestre
 \end{minipage}
 \end{mdframed}
 
@@ -202,6 +203,7 @@ para operar el sistema de forma local.
 % ============================================================
 %  2. ALCANCE DE LA SOLUCIÓN
 % ============================================================
+\needspace{12cm}
 \section{2. Alcance de la Solución}
 
 \begin{tabularx}{\textwidth}{@{}>{\bfseries\sffamily\small\color{azulprincipal}}L{4.2cm}
@@ -219,7 +221,7 @@ para operar el sistema de forma local.
   Conectividad en portería &
     \textit{Router} TP-Link Archer AX12 Wi-Fi~6 --- conexión LAN al \textit{relay} y Wi-Fi para residentes \\[3pt]
   Infraestructura de red &
-    Cable UTP Cat6 100\% cobre tendido en tubería conduit subterránea (50~m) desde
+    Cable UTP Cat6 100\% cobre tendido en tubería conduit subterránea (15~m) desde
     punto de internet existente hasta portería \\[3pt]
   \rowcolor{grisclaro}
   Alojamiento y protección &
@@ -377,8 +379,7 @@ para operar el sistema de forma local.
 
 \vspace{4pt}
 {\small\sffamily\color{textogris}
-Los precios están sujetos a cambios por disponibilidad en proveedores de MercadoLibre, envíos e impuestos de importación.
-Valores expresados en pesos colombianos (COP) con IVA incluido donde aplica.}
+Los precios están sujetos a cambios por disponibilidad en proveedores de MercadoLibre, envíos e impuestos de importación.}
 
 % ============================================================
 %  6. CONDICIONES COMERCIALES
@@ -392,7 +393,7 @@ Valores expresados en pesos colombianos (COP) con IVA incluido donde aplica.}
   \midrule
   \rowcolor{grisclaro}
   Forma de pago &
-    70\% de anticipo al aceptar la propuesta --- 30\% contra entrega y pruebas \\[4pt]
+    70\% anticipo al aceptar la propuesta --- 30\% contra entrega y pruebas \\[4pt]
   Tiempo de ejecución &
     Recibido el anticipo, se procederá de inmediato con la compra de los materiales.
     Una vez entregado el último de ellos, la instalación iniciará dentro de los 5~días
@@ -405,72 +406,10 @@ Valores expresados en pesos colombianos (COP) con IVA incluido donde aplica.}
   \bottomrule
 \end{tabularx}
 
-% ============================================================
-%  7. CONSIDERACIONES Y EXCLUSIONES
-% ============================================================
-\section{7. Consideraciones y Exclusiones}
+\vspace{1.2cm}
 
-\begin{minipage}[t]{0.48\textwidth}
-  \subsection{Incluye}
-  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=4pt]
-    \item Suministro, instalación y configuración de todos los equipos y materiales listados
-    \item Obra civil menor: excavación, tendido de tubería y relleno de zanja (15~m)
-    \item Configuración de acceso para hasta 30 usuarios residentes en apps Shelly y EZVIZ
-    \item Una sesión de capacitación virtual o presencial para administración y residentes
-  \end{itemize}
-\end{minipage}%
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-  \subsection{No incluye}
-  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=4pt]
-    \item Contrato de servicio de internet con el ISP (proveedor de internet)
-    \item Plan de datos móviles para conectividad 4G de la cámara
-    \item Obra civil mayor: retiro de pavimento, andenes o estructuras existentes
-    \item Modificaciones al motor de la puerta si no cuenta con entrada para contactos secos
-    \item Suministro del \textit{breaker} de 15~A en el tablero eléctrico principal
-  \end{itemize}
-\end{minipage}
-
-% ============================================================
-%  8. ACEPTACIÓN
-% ============================================================
-\clearpage
-\vspace*{\fill}
-
-\begin{minipage}{\textwidth}
-\begin{mdframed}[
-  backgroundcolor=azulclaro,
-  linecolor=azulprincipal,
-  linewidth=0.8pt,
-  innertopmargin=14pt, innerbottommargin=14pt,
-  innerleftmargin=18pt, innerrightmargin=18pt,
-  roundcorner=4pt
-]
-\sffamily\small
-\textcolor{azulprincipal}{\textbf{Para la aceptación de esta propuesta, favor comunicarse con:}}\\[8pt]
-\begin{tabular}{@{}ll@{}}
-  \textcolor{azulprincipal}{\textbf{Nombre:}}  & Juan Pablo Palacio Villa \\[4pt]
-  \textcolor{azulprincipal}{\textbf{C.C.:}}    & 1.035.833.895 \\[4pt]
-  \textcolor{azulprincipal}{\textbf{Correo:}}  & juanpablopalaciovilla@gmail.com \\
-\end{tabular}
-
-\vspace{20pt}
-
-\begin{tabularx}{\linewidth}{@{}XX@{}}
-  \rule{5.5cm}{0.4pt} & \rule{5.5cm}{0.4pt} \\[5pt]
-  \small\textcolor{textogris}{Firma y sello del proponente} &
-  \small\textcolor{textogris}{Firma y sello del contratante} \\[3pt]
-  \small\textcolor{textogris}{Juan Pablo Palacio Villa} &
-  \small\textcolor{textogris}{Parcelación Cielo Campestre} \\
-\end{tabularx}
-\end{mdframed}
-\end{minipage}
-
-\vspace{0.8cm}
 {\centering\small\sffamily\color{textogris}
-\textit{Propuesta elaborada el 23 de mayo de 2026 --- Referencia PCC-001-2026}
+\textit{Propuesta elaborada el 23 de Mayo de 2026}
 \par}
-
-\vspace*{\fill}
 
 \end{document}
