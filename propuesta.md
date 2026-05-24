@@ -120,4 +120,4 @@ El residente puede visualizar la cámara con audio bidireccional y, si lo autori
 
 ---
 
-*Propuesta elaborada en Mayo de 2026 — Referencia PCC-001-2026*
+*Propuesta elaborada el 23 de Mayo de 2026*
